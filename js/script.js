@@ -1,67 +1,10 @@
 'use strict';
 window.addEventListener('DOMContentLoaded', function () {
-	// const startTime = Date.now();
-	// const endTime = startTime + 150000;
-	// let equals = endTime - startTime;
-	// let timer;
-	// console.log(startTime);
-
-	// function update() {
-	// 	let t = Date.now();
-	// 	if (t >= 1644481638736) {
-	// 		clearInterval(timer);
-	// 	} else {
-	// 		console.log(t);
-	// 	}
-	// }
-	// timer = setInterval(update, 567);
-
-	// console.log('Start');
-	// function timeUpdate() {
-	// 	if (equals === 0) {
-	// 		clearInterval(timer);
-	// 		console.log('Finish');
-	// 	} else {
-	// 		equals = equals - 10000;
-	// 		console.log(equals);
-	// 	}
-	// }
-	// timer = setInterval(timeUpdate, 300);
-
-
-	// ========================================
-
-	// const dateNow = new Date();
-
-	// console.log(dateNow.getHours());
-
-	// const input = document.querySelector('.input');
-	// const btn = document.querySelector('.btn');
-
-	// btn.addEventListener('click', () => {
-	// 	let numInput = input.value;
-	// 	numInput = parseInt(numInput);
-	// 	if (Number.isInteger(numInput)) {
-	// 		console.log(numInput);
-	// 	} else {
-	// 		console.log('Please enter number');
-	// 	}
-	// });
-
-	// function calculateDate(start, end) {
-	// 	let equal = 0;
-	// 	equal = end - start;
-	// 	return equal;
-	// }
-
-	// console.log(calculateDate(Date.now(), 12));
-
-
-	// ===============================================================
 	// Timestamp to date -----
 	console.log(Date.now());
 	let inputStamp = document.querySelector('.date-input'),
-		btnConv = document.querySelector('.btn-convert');
+		btnConv = document.querySelector('.btn-convert'),
+		outDate = document.querySelector('.outDate');
 
 	btnConv.addEventListener('click', () => {
 		let stamp = inputStamp.value;
@@ -74,6 +17,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		let minutes = dateObj.getMinutes();
 		let seconds = dateObj.getSeconds();
 		console.log(`Year: ${year}, Month: ${month}, Date: ${date} Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`);
+		outDate.innerHTML = `Year: ${year}, Month: ${month}, Date: ${date} Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`;
 	});
 
 	// Date to timeStamp -------
@@ -98,7 +42,6 @@ window.addEventListener('DOMContentLoaded', function () {
 		resHour = resMinute * 60,
 		resDay = resHour * 24,
 		resYear = resDay * 365;
-
 
 	btnDateToStamp.addEventListener('click', () => {
 		let ye = year.value;
@@ -143,32 +86,5 @@ window.addEventListener('DOMContentLoaded', function () {
 
 		output.innerHTML = `Years: ${leftYears},  Days: ${leftDays} Hours: ${leftHours}, Minutes: ${leftMinutes}, Seconds: ${leftSeconds}`;
 	});
-
-
-	// function timeDifference(current, previous) {
-
-	// 	let msPerMinute = 60 * 1000;
-	// 	let msPerHour = msPerMinute * 60;
-	// 	let msPerDay = msPerHour * 24;
-	// 	let msPerMonth = msPerDay * 30;
-	// 	let msPerYear = msPerDay * 365;
-
-	// 	let elapsed = current - previous;
-
-	// 	if (elapsed < msPerMinute) {
-	// 		return Math.round(elapsed / 1000) + ' seconds ago';
-	// 	} else if (elapsed < msPerHour) {
-	// 		return Math.round(elapsed / msPerMinute) + ' minutes ago';
-	// 	} else if (elapsed < msPerDay) {
-	// 		return Math.round(elapsed / msPerHour) + ' hours ago';
-	// 	} else if (elapsed < msPerMonth) {
-	// 		return 'approximately ' + Math.round(elapsed / msPerDay) + ' days ago';
-	// 	} else if (elapsed < msPerYear) {
-	// 		return 'approximately ' + Math.round(elapsed / msPerMonth) + ' months ago';
-	// 	} else {
-	// 		return 'approximately ' + Math.round(elapsed / msPerYear) + ' years ago';
-	// 	}
-	// }
-
 
 });
