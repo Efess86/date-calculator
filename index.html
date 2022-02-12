@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Calculate time</title>
+</head>
+
+<body>
+	<input type="text" class="input">
+	<button class="btn">Press</button>
+
+
+	<h2>TimeStamp to date</h2>
+	<input type="number" class="date-input">
+	<button class="btn-convert">Convert</button>
+
+	<h2>Calculate remaining time</h2>
+	<div class="start">
+		<h4>Start date</h4>
+		<input type="number" class="start-year startDate" placeholder="Year">
+		<input type="number" class="start-month startDate" placeholder="Month">
+		<input type="number" class="start-date startDate" placeholder="Date">
+		<input type="number" class="start-hours startDate" placeholder="Hours">
+		<input type="number" class="start-minutes startDate" placeholder="Minutes">
+		<input type="number" class="start-seconds startDate" placeholder="Seconds">
+	</div>
+
+	<div class="end">
+		<h4>End date</h4>
+		<input type="number" class="end-year endDate" placeholder="Year">
+		<input type="number" class="end-month endDate" placeholder="Month">
+		<input type="number" class="end-date endDate" placeholder="Date">
+		<input type="number" class="end-hours endDate" placeholder="Hours">
+		<input type="number" class="end-minutes endDate" placeholder="Minutes">
+		<input type="number" class="end-seconds endDate" placeholder="Seconds">
+	</div>
+
+	<div><button class="dts-btn">Calculate time</button>
+		<div class="dts-out">Years: 00, Months: 00, Days: 00, Hours: 00, Minutes: 00, Seconds: 00</div>
+
+	</div>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>
